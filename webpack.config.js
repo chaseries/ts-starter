@@ -1,6 +1,6 @@
 const path = require("path");
 const srcDir = path.resolve(__dirname, "src");
-const buildDir = path.resolve(__dirname, "build");
+const distDir = path.resolve(__dirname, "dist");
 const isProduction = process.env.NODE_ENV === "production";
 
 
@@ -11,7 +11,7 @@ module.exports = {
   },
   entry: path.join(srcDir, "main.ts"),
   output: {
-    path: buildDir,
+    path: distDir,
     filename: "main.js"
   },
   module: {
